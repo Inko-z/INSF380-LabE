@@ -6,8 +6,4 @@ public interface IToDoList {
     public void editTask(String taskNum, String description, Boolean taskState);
     public void completingTask(String taskNum);
     public void listTasks();
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> guntaas
