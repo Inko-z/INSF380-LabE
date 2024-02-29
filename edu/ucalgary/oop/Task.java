@@ -14,6 +14,11 @@ public class Task {
         this.isCompleted = isCompleted;
     }
 
+    // overloading
+    public Task(String id, String title) {
+        this(id, title, false);
+    }
+
     // Getters
 
     public String getId() {
@@ -62,4 +67,5 @@ public class Task {
     public int hashCode() {
         return Objects.hash(id, title, isCompleted);
     }
+
 }
