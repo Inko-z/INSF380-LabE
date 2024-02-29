@@ -3,6 +3,7 @@ package edu.ucalgary.oop;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class ToDoList implements IToDoList {
     private List<Task> tasks;
@@ -42,7 +43,7 @@ public class ToDoList implements IToDoList {
     }
 
     @Override
-    public void editTask(String taskId, String newTitle, Boolean isComplete) {
+    public void editTask(String taskId, String newTitle, Boolean taskState) {
         saveState();
         tasks.stream()
              .filter(task -> task.getId().equals(taskId))
