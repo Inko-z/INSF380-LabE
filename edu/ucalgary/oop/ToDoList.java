@@ -42,7 +42,7 @@ public class ToDoList implements IToDoList {
     }
 
     @Override
-    public void editTask(String taskId, String newTitle) {
+    public void editTask(String taskId, String newTitle, Boolean isComplete) {
         saveState();
         tasks.stream()
              .filter(task -> task.getId().equals(taskId))

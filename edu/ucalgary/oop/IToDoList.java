@@ -1,13 +1,12 @@
 package edu.ucalgary.oop;
 
+import java.util.List;
+
 public interface IToDoList {
-    public void addTask(Task givenTask);
-    public void deleteTask(String taskNumString);
-    public void editTask(String taskNum, String description, Boolean taskState);
-    public void completingTask(String taskNum);
-    public void listTasks();
-<<<<<<< HEAD
+    public void addTask(Task task);
+    public void deleteTask(String taskId);
+    public void editTask(String taskId, String newTitle, Boolean isComplete);
+    public void completeTask(String taskId);
+    public void undo();
+    public List<Task> listTasks();
 }
-=======
-}
->>>>>>> guntaas
