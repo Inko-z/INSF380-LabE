@@ -46,10 +46,14 @@ public class ToDoList implements IToDoList {
     public void editTask(String taskId, String newTitle, Boolean taskState) {
         saveState();
         tasks.stream()
-             .filter(task -> task.getId().equals(taskId))
-             .findFirst()
-             .ifPresent(task -> task.setTitle(newTitle));
+         .filter(task -> task.getId().equals(taskId))
+         .findFirst()
+         .ifPresent(task -> {
+             task.setTitle(newTitle);
+             task.setCompleted(taskState);
+         });
     }
+
 
     @Override
     public void undo() {
